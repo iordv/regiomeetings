@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Regiomeetings Noteren</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { text-align: center; }
+        form { max-width: 600px; margin: auto; }
+        label { display: block; margin: 15px 0 5px; }
+        select, input, textarea { width: 100%; padding: 8px; }
+        button { padding: 10px 15px; margin-top: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 50px; }
+        th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        .action-buttons { display: flex; gap: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>Regiomeetings</h1>
+
+    <form id="meetingForm">
+        <h2>Nieuwe Meeting Toevoegen</h2>
+
+        <label for="consultant">Consultant:</label>
+        <select id="consultant" name="consultant" required>
+            <option value="">Selecteer een consultant</option>
+            <option value="Jordy">Jordy</option>
+            <option value="Rik M">Rik M</option>
+            <option value="Rik B">Rik B</option>
+            <option value="Emma">Emma</option>
+            <option value="Serana">Serana</option>
+            <option value="Aurora">Aurora</option>
+            <option value="Lidewij">Lidewij</option>
+        </select>
+
+        <label for="datum">Datum:</label>
+        <input type="date" id="datum" name="datum" required>
+
+        <label for="tijd">Tijd:</label>
+        <select id="tijd" name="tijd" required>
+            <option value="">Selecteer een tijd</option>
+            <option value="10:00 - 12:00">10:00 - 12:00</option>
+            <option value="13:00 - 15:00">13:00 - 15:00</option>
+        </select>
+
+        <label for="locatie">Locatie:</label>
+        <input type="text" id="locatie" name="locatie" required>
+
+        <label for="opmerkingen">Opmerkingen:</label>
+        <textarea id="opmerkingen" name="opmerkingen"></textarea>
+
+        <button type="submit">Meeting Toevoegen</button>
+    </form>
+
+    <table id="meetingsTable">
+        <thead>
+            <tr>
+                <th>Consultant</th>
+                <th>Datum</th>
+                <th>Tijd</th>
+                <th>Locatie</th>
+                <th>Opmerkingen</th>
+                <th>Acties</th>
+            </tr>
+        </thead>
+        <tbody id="meetingsList">
+            <!-- Meetings worden hier geladen -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
