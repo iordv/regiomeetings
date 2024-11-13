@@ -44,11 +44,11 @@ document.getElementById('meetingForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const meeting = {
-        Consultant: document.getElementById('consultant').value,
-        Datum: document.getElementById('datum').value,
-        Tijd: document.getElementById('tijd').value,
-        Locatie: document.getElementById('locatie').value,
-        Opmerkingen: document.getElementById('opmerkingen').value
+        Consultant: document.getElementById('Consultant').value,
+        Datum: document.getElementById('Datum').value,
+        Tijd: document.getElementById('Tijd').value,
+        Locatie: document.getElementById('Locatie').value,
+        Opmerkingen: document.getElementById('Opmerkingen').value
     };
 
     await addMeeting(meeting);
